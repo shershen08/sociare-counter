@@ -18,7 +18,7 @@ $ npm install --save sociare-counter
 var sociare = require('sociare-counter');
 
 sociare.getCounts('http://google.com', {
-	networks: ['facebook', 'twitter', 'pinterest']
+	networks: ['facebook', 'linkedin', 'pinterest']
 }).then(function (counts) {
 	// Do something with the counts
 });
@@ -50,7 +50,7 @@ Sociare Counter has only one method: `sociare.getCounts(url, [options])`, which 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `networks` | Array[String] | 	Networks to fetch counts from. Defaults to `['facebook', 'twitter', 'pinterest', 'linkedin', 'googleplus']` |
+| `networks` | Array[String] | 	Networks to fetch counts from. Defaults to `['facebook', 'pinterest', 'linkedin', 'googleplus']` |
 | `omitQuery` | Boolean | Whether query strings should be stripped from the URL before getting counts. Defaults to `false` |
 
 
@@ -60,14 +60,16 @@ Sociare Counter has only one method: `sociare.getCounts(url, [options])`, which 
 
 Getting share counts from all the different social networks is... a pain, to say the least. Wouldn't it be great to have one way to get said counts, and have it always return a standard, known format? Yeah, we thought so too, which is where Sociare Counter comes into play! Simply specify the networks you want counts from and give it a url, it's easy as that!
 
-Sociare Counter currently supports the following networks:
+Sociare Counter currently supports the following networks without special authentication:
 
 * Facebook
-* Twitter
 * Pinterest
 * LinkedIn
 * Google+
 
+### Twitter share API requires app credentials
+
+[02/05/2016] Twitter has recently closed the public assess to its share count API without authorisation [blog.twitter.com](https://blog.twitter.com/2015/hard-decisions-for-a-sustainable-platform).
 
 ## Contributing
 
