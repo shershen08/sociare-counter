@@ -45,7 +45,7 @@ describe('[Services] - Base', () => {
 
     describe('formatData', () => {
         it('should return the count property', () => {
-            expect(service.formatData(data)).to.equal(5);
+            expect(service.formatData(data)).to.equal(4);
         });
 
         it('should return 0 if count property is falsy', () => {
